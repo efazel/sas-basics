@@ -43,3 +43,20 @@ data work.stress(drop=HIGH);
 run;
 proc print data=work.stress;
 run;
+
+
+* create excel files;
+libname excelout xlsx 'XXX';
+data excelout.HighStress;
+	set cert.stress;
+run;
+
+* write observation explicitly;
+data certXL.obs_output;
+	set certxl.Activitylevels;
+	if _n_ = 5 then output;
+run;
+proc print data=certxl.obs_output;
+run;
+
+
