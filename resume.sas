@@ -55,5 +55,3 @@ data certXL.obs_output;
 run;
 proc print data=certxl.obs_output;
 run;
-
-
