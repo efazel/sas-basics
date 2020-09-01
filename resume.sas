@@ -18,7 +18,6 @@ data Men50.males;
 	where sex='M' and age>50;
 run;
 
-
 * Import excel file. create permanent library certxl;
 libname certxl XLSX '/folders/myfolders/cert/exercise.xlsx';
 data work.stress(drop=ActLevel);
@@ -34,7 +33,6 @@ data work.bstock;
 	set certxl.'boots stock'n;
 run;
 
-
 * Import excel file. create permanent library certxl and print the results;
 libname certxl XLSX '/folders/myfolders/cert/exercise.xlsx';
 data work.stress(drop=HIGH);
@@ -43,7 +41,6 @@ data work.stress(drop=HIGH);
 run;
 proc print data=work.stress;
 run;
-
 
 * create excel files;
 libname excelout xlsx 'XXX';
